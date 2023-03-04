@@ -37,7 +37,7 @@ jobs:
         run: npx semantic-release
 
       - name: print
-        run: echo "${{ toJSON(github.repository) }}
+        run: echo "${{ toJSON(github.repository) }}"
 
       - name: Slack Notification
         if: ${{ always() }}
