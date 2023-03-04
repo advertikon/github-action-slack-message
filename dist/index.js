@@ -14004,21 +14004,19 @@ try {
     const url = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)('channel-url');
     const status = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)('status');
 
-    console.log(JSON.stringify(_actions_github__WEBPACK_IMPORTED_MODULE_1__.context, null, 2))
-
     await (0,node_fetch__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .ZP)(url, {
         method: 'post',
         headers: {
             'Content-type': 'application/json'
         },
         body: JSON.stringify({
-            text: `New release in ${_actions_github__WEBPACK_IMPORTED_MODULE_1__.context.repository.name}`,
+            text: `New release in ${_actions_github__WEBPACK_IMPORTED_MODULE_1__.context.payload.repository.name}`,
             blocks: [
                 {
                     type: "section",
                     text: {
                         type: "mrkdwn",
-                        text: `${_actions_github__WEBPACK_IMPORTED_MODULE_1__.context.repository.name}: ${status ? 'new release' : 'error'}`
+                        text: `${_actions_github__WEBPACK_IMPORTED_MODULE_1__.context.payload.repository.name}: ${status ? 'new release' : 'error'}`
                     }
                 }
             ]

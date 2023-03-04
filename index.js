@@ -6,21 +6,19 @@ try {
     const url = getInput('channel-url');
     const status = getInput('status');
 
-    console.log(JSON.stringify(context, null, 2))
-
     await fetch(url, {
         method: 'post',
         headers: {
             'Content-type': 'application/json'
         },
         body: JSON.stringify({
-            text: `New release in ${context.repository.name}`,
+            text: `New release in ${context.payload.repository.name}`,
             blocks: [
                 {
                     type: "section",
                     text: {
                         type: "mrkdwn",
-                        text: `${context.repository.name}: ${status ? 'new release' : 'error'}`
+                        text: `${context.payload.repository.name}: ${status ? 'new release' : 'error'}`
                     }
                 }
             ]
