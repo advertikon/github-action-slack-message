@@ -5,6 +5,7 @@ import fetch from 'node-fetch';
 try {
     const url = getInput('channel-url');
     const status = getInput('status');
+    const version = getInput('version');
 
     await fetch(url, {
         method: 'post',
@@ -17,7 +18,7 @@ try {
                     "type": "header",
                     "text": {
                         "type": "plain_text",
-                        "text": `${context.payload.repository.name} ${status === 'success' ? ':thumbsup:' : ':rage:'}`,
+                        "text": `${context.payload.repository.name} ${version ? `(${version})` : ''} ${status === 'success' ? ':thumbsup:' : ':rage:'}`,
                         "emoji": true
                     }
                 },

@@ -14003,6 +14003,7 @@ __nccwpck_require__.a(__webpack_module__, async (__webpack_handle_async_dependen
 try {
     const url = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)('channel-url');
     const status = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)('status');
+    const version = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)('version');
 
     await (0,node_fetch__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .ZP)(url, {
         method: 'post',
@@ -14015,7 +14016,7 @@ try {
                     "type": "header",
                     "text": {
                         "type": "plain_text",
-                        "text": `${_actions_github__WEBPACK_IMPORTED_MODULE_1__.context.payload.repository.name} ${status === 'success' ? ':thumbsup:' : ':rage:'}`,
+                        "text": `${_actions_github__WEBPACK_IMPORTED_MODULE_1__.context.payload.repository.name} ${version ? `(${version})` : ''} ${status === 'success' ? ':thumbsup:' : ':rage:'}`,
                         "emoji": true
                     }
                 },
