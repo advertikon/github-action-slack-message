@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/advertikon/github-action-slack-message/compare/v1.0.3...v1.0.4) (2023-03-04)
+
+
+### Bug Fixes
+
+* build ([c8b52b2](https://github.com/advertikon/github-action-slack-message/commit/c8b52b2340c866c699c37b75530519c24a1b0b75))
+
 ## [1.0.3](https://github.com/advertikon/github-action-slack-message/compare/v1.0.2...v1.0.3) (2023-03-04)
 
 
