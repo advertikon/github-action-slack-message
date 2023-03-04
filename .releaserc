@@ -1,6 +1,6 @@
 {
     "branches": ["master", "main"],
-    "repositoryUrl": "https://github.com/advertikon/github-action-relese-info",
+    "repositoryUrl": "https://github.com/advertikon/github-action-slack-message",
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/changelog",
