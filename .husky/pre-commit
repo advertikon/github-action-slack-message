@@ -2,4 +2,5 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 npx ncc build index.js -o dist
+git add .
 git commit --amend --no-verify

@@ -1,25 +1,28 @@
 import { getInput, setFailed } from '@actions/core';
-import { getOctokit, context } from '@actions/github';
+import { context } from '@actions/github';
+import fetch from 'node-fetch';
 
 try {
     const url = getInput('channel-url');
     const status = getInput('status');
-    const octokit = getOctokit('');
 
-    await octokit.request(`POST ${url}`, {
+    await fetch(url, {
+        method: 'post',
         headers: {
             'Content-type': 'application/json'
         },
-        text: `New release in ${context.repository.name}`,
-        "blocks": [
-            {
-                "type": "section",
-                "text": {
-                    "type": "mrkdwn",
-                    "text": `${context.repository.name}: ${status ? 'new release' : 'error'}`
+        body: JSON.stringify({
+            text: `New release in ${context.repository.name}`,
+            blocks: [
+                {
+                    type: "section",
+                    text: {
+                        type: "mrkdwn",
+                        text: `${context.repository.name}: ${status ? 'new release' : 'error'}`
+                    }
                 }
-            }
-        ]
+            ]
+        })
     });
 
 } catch (error) {
