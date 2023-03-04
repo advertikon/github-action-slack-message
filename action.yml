@@ -1,7 +1,7 @@
 name: 'Slack notification'
 description: 'Sends notification to Slack'
 inputs:
-  chanel-url:
+  channel-url:
     description: 'Github token'
     required: true
   status:
