@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/advertikon/github-action-slack-message/compare/v1.0.5...v1.1.0) (2023-03-04)
+
+
+### Features
+
+* change message appearance ([94eb1d9](https://github.com/advertikon/github-action-slack-message/commit/94eb1d9ead99f1e7450668ec8c7760e66657285b))
+
 ## [1.0.5](https://github.com/advertikon/github-action-slack-message/compare/v1.0.4...v1.0.5) (2023-03-04)
 
 
