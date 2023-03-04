@@ -1,0 +1,13 @@
+name: 'Slack notification'
+description: 'Sends notification to Slack'
+inputs:
+  chanel-url:
+    description: 'Github token'
+    required: true
+  status:
+    description: 'Workflow status'
+    required: true
+runs:
+  using: 'node16'
+  pre: 'init.js'
+  main: 'index.js'
