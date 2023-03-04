@@ -4,7 +4,7 @@ import { getOctokit, context } from '@actions/github';
 try {
     const url = getInput('channel-url');
     const status = getInput('status');
-    const octokit = getOctokit();
+    const octokit = getOctokit('');
 
     await octokit.request(`POST ${url}`, {
         headers: {

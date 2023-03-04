@@ -9673,7 +9673,7 @@ __nccwpck_require__.a(__webpack_module__, async (__webpack_handle_async_dependen
 try {
     const url = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)('channel-url');
     const status = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)('status');
-    const octokit = (0,_actions_github__WEBPACK_IMPORTED_MODULE_1__.getOctokit)();
+    const octokit = (0,_actions_github__WEBPACK_IMPORTED_MODULE_1__.getOctokit)('');
 
     await octokit.request(`POST ${url}`, {
         headers: {
