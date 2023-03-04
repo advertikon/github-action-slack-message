@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/advertikon/github-action-slack-message/compare/v1.0.0...v1.0.1) (2023-03-04)
+
+
+### Bug Fixes
+
+* fix inputs ([4533c87](https://github.com/advertikon/github-action-slack-message/commit/4533c876ccc0feab80f51240ce2961f628586f46))
+
 # 1.0.0 (2023-03-04)
 
 
