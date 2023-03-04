@@ -36,9 +36,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
 
-      - name: print
-        run: echo "${{ toJSON(github.repository) }}"
-
       - name: Slack Notification
         if: ${{ always() }}
         id: slack
@@ -46,13 +43,13 @@ jobs:
         with:
           payload: |
             {
-              "text": "${{ github.repository.name }}: new release",
+              "text": "${{ github.repository }}: new release",
               "blocks": [
                 {
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "${{ github.repository.name }}: new release (${{ job.status }})"
+                    "text": "${{ github.repository }}: new release (${{ job.status }})"
                   }
                 }
               ]
