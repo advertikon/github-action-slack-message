@@ -1,3 +1,13 @@
+## [1.0.3](https://github.com/advertikon/github-action-slack-message/compare/v1.0.2...v1.0.3) (2023-03-04)
+
+
+### Bug Fixes
+
+* change ([3ef7920](https://github.com/advertikon/github-action-slack-message/commit/3ef79209ebb377a16a3ccd70e3c13092c0ff8096))
+* mainual build ([fcdc38a](https://github.com/advertikon/github-action-slack-message/commit/fcdc38a8ad8a64352dd8d117283804d1b207b2fb))
+* oktokit token ([815bb05](https://github.com/advertikon/github-action-slack-message/commit/815bb0519c1c0dc7771a255a1d0beccbec8b7c84))
+* oktokit token ([3e03c0f](https://github.com/advertikon/github-action-slack-message/commit/3e03c0f94e9dd3e95b7686c5364094cc91f74d1d))
+
 ## [1.0.2](https://github.com/advertikon/github-action-slack-message/compare/v1.0.1...v1.0.2) (2023-03-04)
 
 
