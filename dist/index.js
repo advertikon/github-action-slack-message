@@ -14010,14 +14010,26 @@ try {
             'Content-type': 'application/json'
         },
         body: JSON.stringify({
-            text: `New release in ${_actions_github__WEBPACK_IMPORTED_MODULE_1__.context.payload.repository.name}`,
-            blocks: [
+            "blocks": [
                 {
-                    type: "section",
-                    text: {
-                        type: "mrkdwn",
-                        text: `${_actions_github__WEBPACK_IMPORTED_MODULE_1__.context.payload.repository.name}: ${status ? 'new release' : 'error'}`
+                    "type": "header",
+                    "text": {
+                        "type": "plain_text",
+                        "text": `${_actions_github__WEBPACK_IMPORTED_MODULE_1__.context.payload.repository.name} ${status === 'success' ? ':thumbsup:' : ':rage:'}`,
+                        "emoji": true
                     }
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "section",
+                    "text": {
+                        "type": "mrkdwn",
+                        "text": "*Commits:*\n" + _actions_github__WEBPACK_IMPORTED_MODULE_1__.context.payload.commits.map(c => {
+                            return `${c.author.name}: ${c.message} <${c.url}|check differences>`
+                        }).join("\n")
+                    },
                 }
             ]
         })

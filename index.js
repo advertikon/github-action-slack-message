@@ -12,14 +12,26 @@ try {
             'Content-type': 'application/json'
         },
         body: JSON.stringify({
-            text: `New release in ${context.payload.repository.name}`,
-            blocks: [
+            "blocks": [
                 {
-                    type: "section",
-                    text: {
-                        type: "mrkdwn",
-                        text: `${context.payload.repository.name}: ${status ? 'new release' : 'error'}`
+                    "type": "header",
+                    "text": {
+                        "type": "plain_text",
+                        "text": `${context.payload.repository.name} ${status === 'success' ? ':thumbsup:' : ':rage:'}`,
+                        "emoji": true
                     }
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "section",
+                    "text": {
+                        "type": "mrkdwn",
+                        "text": "*Commits:*\n" + context.payload.commits.map(c => {
+                            return `${c.author.name}: ${c.message} <${c.url}|check differences>`
+                        }).join("\n")
+                    },
                 }
             ]
         })
