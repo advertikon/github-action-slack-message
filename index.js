@@ -2,7 +2,7 @@ import { getInput, setFailed } from '@actions/core';
 import { getOctokit, context } from '@actions/github';
 
 try {
-    const url = getInput('chanel-url');
+    const url = getInput('channel-url');
     const status = getInput('status');
     const octokit = getOctokit();
 
