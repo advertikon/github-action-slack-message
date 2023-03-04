@@ -9,5 +9,4 @@ inputs:
     required: true
 runs:
   using: 'node16'
-  pre: 'init.js'
-  main: 'index.js'
+  main: 'dist/index.js'
