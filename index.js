@@ -6,6 +6,8 @@ try {
     const url = getInput('channel-url');
     const status = getInput('status');
 
+    console.log(JSON.stringify(context, null, 2))
+
     await fetch(url, {
         method: 'post',
         headers: {
