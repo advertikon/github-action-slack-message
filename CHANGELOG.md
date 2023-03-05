@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/advertikon/github-action-slack-message/compare/v1.2.1...v1.3.0) (2023-03-05)
+
+
+### Features
+
+* add fallback text message ([3c5d8e6](https://github.com/advertikon/github-action-slack-message/commit/3c5d8e649fa9e6ccc8870f5eab1a70b5ab9d682e))
+
 ## [1.2.1](https://github.com/advertikon/github-action-slack-message/compare/v1.2.0...v1.2.1) (2023-03-05)
 
 
