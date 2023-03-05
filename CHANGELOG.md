@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/advertikon/github-action-slack-message/compare/v1.2.0...v1.2.1) (2023-03-05)
+
+
+### Bug Fixes
+
+* **ci:** add npm semantic release ([732ebfa](https://github.com/advertikon/github-action-slack-message/commit/732ebfa75861699c40c97831640a0ae25f56d648))
+
 # [1.2.0](https://github.com/advertikon/github-action-slack-message/compare/v1.1.0...v1.2.0) (2023-03-04)
 
 
