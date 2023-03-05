@@ -13,6 +13,7 @@ try {
             'Content-type': 'application/json'
         },
         body: JSON.stringify({
+            text: `${context.payload.repository.name} ${version ? `(${version})` : ''} Status: ${status}`,
             "blocks": [
                 {
                     "type": "header",
